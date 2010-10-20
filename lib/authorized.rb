@@ -10,6 +10,11 @@ HTML::WhiteListSanitizer.allowed_attributes.merge(%w(
 	id class style
 ))
 
+%w{models controllers}.each do |dir|
+	path = File.expand_path(File.join(File.dirname(__FILE__), '../app', dir))
+	ActiveSupport::Dependencies.autoload_paths << path
+end
+
 require 'authorized/core_extension'
 require 'authorized/user_model'
 require 'authorized/authorization'
