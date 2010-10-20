@@ -27,8 +27,8 @@ begin
 		# gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
 
 		gem.files  = FileList['config/routes.rb']
-		gem.files += FileList['config/document.yml']
-		gem.files += FileList['config/photo.yml']
+#		gem.files += FileList['config/document.yml']
+#		gem.files += FileList['config/photo.yml']
 		gem.files += FileList['app/**/*.rb']
 		gem.files += FileList['app/**/*.erb']
 		gem.files += FileList['lib/**/*.rb']
