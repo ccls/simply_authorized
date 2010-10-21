@@ -1,6 +1,7 @@
 module Authorized
 #	predefined namespace
 end
+require 'active_support'
 require 'ruby_extension'
 require 'rails_helpers'
 require 'acts_as_list'
@@ -29,7 +30,6 @@ require 'authorized/resourceful_controller'
 require 'authorized/permissive_controller'
 
 if !defined?(RAILS_ENV) || RAILS_ENV == 'test'
-	require 'active_support'
 	require 'active_support/test_case'
 	require 'factory_girl'
 	require 'assert_this_and_that'
