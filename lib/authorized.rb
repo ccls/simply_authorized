@@ -38,3 +38,8 @@ if !defined?(RAILS_ENV) || RAILS_ENV == 'test'
 	require 'authorized/factory_test_helper'
 	require 'authorized/pending'
 end
+
+ActionController::Routing::Routes.add_configuration_file(
+	File.expand_path(
+		File.join(
+			File.dirname(__FILE__), '../config/routes.rb')))
