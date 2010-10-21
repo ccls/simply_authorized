@@ -14,11 +14,12 @@ HTML::WhiteListSanitizer.allowed_attributes.merge(%w(
 %w{models controllers}.each do |dir|
 	path = File.expand_path(File.join(File.dirname(__FILE__), '../app', dir))
 	ActiveSupport::Dependencies.autoload_paths << path
+	ActiveSupport::Dependencies.autoload_once_paths << path
 
 	#	I don't know why I have to do this here
 	#	and nowhere else.  Photos can't find 'role'
 	#	when needed?
-	$: << path
+#	$: << path
 end
 
 require 'authorized/core_extension'
