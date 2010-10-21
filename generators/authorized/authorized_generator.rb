@@ -10,24 +10,24 @@ class AuthorizedGenerator < Rails::Generator::Base
 				m.migration_template "migrations/#{migration}.rb",
 					'db/migrate', :migration_file_name => migration
 			end
-
-#			m.directory('public/javascripts')
-#			Dir["#{File.dirname(__FILE__)}/templates/javascripts/*js"].each{|file| 
-#				f = file.split('/').slice(-2,2).join('/')
-#				m.file(f, "public/javascripts/#{File.basename(file)}")
-#			}
-#			m.directory('public/stylesheets')
-#			Dir["#{File.dirname(__FILE__)}/templates/stylesheets/*css"].each{|file| 
-#				f = file.split('/').slice(-2,2).join('/')
-#				m.file(f, "public/stylesheets/#{File.basename(file)}")
-#			}
+			dot = File.dirname(__FILE__)
+			m.directory('public/javascripts')
+			Dir["#{dot}/templates/javascripts/*js"].each{|file| 
+				f = file.split('/').slice(-2,2).join('/')
+				m.file(f, "public/javascripts/#{File.basename(file)}")
+			}
+			m.directory('public/stylesheets')
+			Dir["#{dot}/templates/stylesheets/*css"].each{|file| 
+				f = file.split('/').slice(-2,2).join('/')
+				m.file(f, "public/stylesheets/#{File.basename(file)}")
+			}
 			m.directory('test/functional/authorized')
-			Dir["#{File.dirname(__FILE__)}/templates/functional/*rb"].each{|file| 
+			Dir["#{dot}/templates/functional/*rb"].each{|file| 
 				f = file.split('/').slice(-2,2).join('/')
 				m.file(f, "test/functional/authorized/#{File.basename(file)}")
 			}
 			m.directory('test/unit/authorized')
-			Dir["#{File.dirname(__FILE__)}/templates/unit/*rb"].each{|file| 
+			Dir["#{dot}/templates/unit/*rb"].each{|file| 
 				f = file.split('/').slice(-2,2).join('/')
 				m.file(f, "test/unit/authorized/#{File.basename(file)}")
 			}
