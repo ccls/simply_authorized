@@ -23,7 +23,6 @@ class UsersController < ApplicationController
 
 	def index
 		@users = User.find(:all)
-#		@users = User.search(params)
 	end
 
 	def destroy
