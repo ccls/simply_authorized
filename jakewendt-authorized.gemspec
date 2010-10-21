@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{jakewendt-authorized}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George 'Jake' Wendt"]
-  s.date = %q{2010-10-20}
+  s.date = %q{2010-10-21}
   s.description = %q{longer description of your gem}
   s.email = %q{github@jake.otherinbox.com}
   s.extra_rdoc_files = [
@@ -18,12 +18,14 @@ Gem::Specification.new do |s|
   s.files = [
     "app/controllers/roles_controller.rb",
      "app/models/role.rb",
+     "app/views/layouts/application.html.erb",
      "config/routes.rb",
      "generators/authorized/USAGE",
      "generators/authorized/authorized_generator.rb",
      "generators/authorized/templates/functional/roles_controller_test.rb",
      "generators/authorized/templates/migrations/create_roles.rb",
      "generators/authorized/templates/migrations/create_roles_users.rb",
+     "generators/authorized/templates/stylesheets/authorized.css",
      "generators/authorized/templates/unit/role_test.rb",
      "lib/authorized.rb",
      "lib/authorized/authorization.rb",
