@@ -40,16 +40,21 @@ Rails::Initializer.run do |config|
 			File.join(File.dirname(__FILE__),'..','test/app/controllers'))
 	]
 
-	config.eager_load_paths += [
-		File.expand_path(
-			File.join(File.dirname(__FILE__),'..','test/app/models')),
-		File.expand_path(
-			File.join(File.dirname(__FILE__),'..','test/app/controllers'))
-	]
+#	config.eager_load_paths += [
+#		File.expand_path(
+#			File.join(File.dirname(__FILE__),'..','test/app/models')),
+#		File.expand_path(
+#			File.join(File.dirname(__FILE__),'..','test/app/controllers'))
+#	]
+#
+#	config.controller_paths += [
+#		File.expand_path(
+#			File.join(File.dirname(__FILE__),'..','test/app/controllers'))
+#	]
 
-	config.controller_paths += [
+	config.view_path = [
 		File.expand_path(
-			File.join(File.dirname(__FILE__),'..','test/app/controllers'))
+			File.join(File.dirname(__FILE__),'..','test/app/views'))
 	]
 
 	if RUBY_PLATFORM =~ /java/
@@ -68,3 +73,4 @@ Rails::Initializer.run do |config|
 		:host => "localhost:3000" }
 
 end
+require 'user'

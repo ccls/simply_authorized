@@ -5,9 +5,10 @@ This is a rails app built around a ruby gem for testing.
 
 == ToDo
 
-merge authorized/controller.rb into authorized/permissive_controller.rb
-
-perhaps include authorized/resourceful_controller.rb as well
+* merge authorized/controller.rb into authorized/permissive_controller.rb
+* perhaps include authorized/resourceful_controller.rb as well
+* remove hard coded :users from Role model
+* build a full development testing app
 
 == Required Gem Sources
 
