@@ -26,7 +26,7 @@ Rails::Initializer.run do |config|
 		File.expand_path(File.join(File.dirname(__FILE__),'../..')),
 		File.expand_path(File.join(File.dirname(__FILE__),'../../..','peter'))
 	]
-	config.plugins = [ :authorized, :html_test, :html_test_extension]
+	config.plugins = [ :simply_authorized, :html_test, :html_test_extension]
 
 	config.frameworks -= [:active_resource]
 
