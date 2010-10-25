@@ -1,1 +1,1 @@
-require 'authorized'
+require 'simply_authorized'

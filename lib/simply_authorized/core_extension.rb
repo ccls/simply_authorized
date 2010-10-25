@@ -1,4 +1,4 @@
-module Authorized
+module SimplyAuthorized
 module CoreExtension
 
 	def class_exists?(full_class_name)
@@ -12,5 +12,5 @@ module CoreExtension
 	end
 
 end	#	CoreExtension
-end	#	Authorized
-include Authorized::CoreExtension
+end	#	SimplyAuthorized
+include SimplyAuthorized::CoreExtension

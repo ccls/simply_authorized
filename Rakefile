@@ -18,11 +18,11 @@ require 'tasks/rails'
 begin
 	require 'jeweler'
 	Jeweler::Tasks.new do |gem|
-		gem.name = "jakewendt-authorized"
+		gem.name = "jakewendt-simply_authorized"
 		gem.summary = %Q{one-line summary of your gem}
 		gem.description = %Q{longer description of your gem}
 		gem.email = "github@jake.otherinbox.com"
-		gem.homepage = "http://github.com/jakewendt/authorized"
+		gem.homepage = "http://github.com/jakewendt/simply_authorized"
 		gem.authors = ["George 'Jake' Wendt"]
 		# gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
 

@@ -1,5 +1,5 @@
 require 'ssl_requirement'
-module Authorized
+module SimplyAuthorized
 module Controller
 
 	def self.included(base)
@@ -84,4 +84,4 @@ module Controller
 	end	#	InstanceMethods
 end	#	Controller
 end	#	CclsEngine
-ActionController::Base.send(:include,Authorized::Controller)
+ActionController::Base.send(:include,SimplyAuthorized::Controller)

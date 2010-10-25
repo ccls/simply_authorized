@@ -1,4 +1,4 @@
-module Authorized::FactoryTestHelper
+module SimplyAuthorized::FactoryTestHelper
 
 	def active_user(options={})
 		u = Factory(:user, options)
@@ -44,4 +44,4 @@ module Authorized::FactoryTestHelper
 	end
 
 end
-ActiveSupport::TestCase.send(:include,Authorized::FactoryTestHelper)
+ActiveSupport::TestCase.send(:include,SimplyAuthorized::FactoryTestHelper)

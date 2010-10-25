@@ -1,4 +1,4 @@
-= Authorized
+= SimplyAuthorized
 
 This is a rails app built around a ruby gem for testing.
 
@@ -20,12 +20,12 @@ This is a rails app built around a ruby gem for testing.
 
 == Installation (as a plugin/engine)
 
- config.gem "jakewendt-authorized",
-    :lib => "authorized"
+ config.gem "jakewendt-simply_authorized",
+    :lib => "simply_authorized"
 
 
  class User
-   authorized
+   simply_authorized
  end
 
 == Testing (as an app)

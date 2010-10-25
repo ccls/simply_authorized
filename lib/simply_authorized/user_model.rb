@@ -1,4 +1,4 @@
-module Authorized
+module SimplyAuthorized
 module UserModel
 
 	def self.included(base)
@@ -10,14 +10,15 @@ module UserModel
 	end
 
 	module PrepMethod
-		def authorized(options={})
+		def simply_authorized(options={})
 
-			include Authorized::UserModel::InstanceMethods
-			extend  Authorized::UserModel::ClassMethods
+			include SimplyAuthorized::UserModel::InstanceMethods
+			extend  SimplyAuthorized::UserModel::ClassMethods
 
 			has_and_belongs_to_many :roles,  :uniq => true
 
 		end
+		alias_method :authorized, :simply_authorized
 	end
 
 	module ClassMethods
@@ -141,4 +142,4 @@ module UserModel
 
 end
 end
-ActiveRecord::Base.send( :include, Authorized::UserModel )
+ActiveRecord::Base.send( :include, SimplyAuthorized::UserModel )

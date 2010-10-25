@@ -1,4 +1,4 @@
-module Authorized
+module SimplyAuthorized
 module Helper
 
 	def user_roles
@@ -25,4 +25,4 @@ module Helper
 
 end
 end
-ActionView::Base.send(:include, Authorized::Helper)
+ActionView::Base.send(:include, SimplyAuthorized::Helper)
