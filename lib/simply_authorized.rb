@@ -3,7 +3,7 @@ module SimplyAuthorized
 end
 require 'active_support'
 require 'ruby_extension'
-require 'rails_helpers'
+require 'simply_helpful'
 require 'acts_as_list'
 require 'calnet_authenticated'
 
