@@ -37,7 +37,7 @@ begin
 		gem.files -= FileList['**/versions/*']
 		gem.test_files = []
 
-		gem.add_dependency('i18n', '=0.3.7')
+#		gem.add_dependency('i18n', '=0.3.7')
 		gem.add_dependency('rails', '~> 2')
 #		gem.add_dependency('activerecord', '~> 2')
 #		gem.add_dependency('activeresource', '~> 2')
