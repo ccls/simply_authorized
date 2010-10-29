@@ -52,3 +52,5 @@ begin
 rescue LoadError
 	puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
 end
+#       From `script/generate calnet_authenticated` ...
+require 'calnet_authenticated/test_tasks'
