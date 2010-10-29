@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{jakewendt-simply_authorized}
-  s.version = "1.0.2"
+  s.version = "1.0.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George 'Jake' Wendt"]
-  s.date = %q{2010-10-27}
+  s.date = %q{2010-10-29}
   s.description = %q{longer description of your gem}
   s.email = %q{github@jake.otherinbox.com}
   s.extra_rdoc_files = [
@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
      "generators/simply_authorized/templates/unit/role_test.rb",
      "lib/simply_authorized.rb",
      "lib/simply_authorized/authorization.rb",
+     "lib/simply_authorized/autotest.rb",
      "lib/simply_authorized/controller.rb",
      "lib/simply_authorized/core_extension.rb",
      "lib/simply_authorized/factories.rb",
@@ -37,6 +38,7 @@ Gem::Specification.new do |s|
      "lib/simply_authorized/permissive_controller.rb",
      "lib/simply_authorized/resourceful_controller.rb",
      "lib/simply_authorized/tasks.rb",
+     "lib/simply_authorized/test_tasks.rb",
      "lib/simply_authorized/user_model.rb",
      "lib/tasks/application.rake",
      "lib/tasks/database.rake",
@@ -48,6 +50,16 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{one-line summary of your gem}
+  s.test_files = [
+    "test/app/controllers/application_controller.rb",
+     "test/app/controllers/home_controller.rb",
+     "test/app/controllers/users_controller.rb",
+     "test/app/models/user.rb",
+     "test/config/routes.rb",
+     "test/functional/authorized/roles_controller_test.rb",
+     "test/test_helper.rb",
+     "test/unit/authorized/role_test.rb"
+  ]
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
