@@ -7,7 +7,7 @@ require 'rake/rdoctask'
 desc 'Generate documentation for the gem.'
 Rake::RDocTask.new(:rdoc) do |rdoc|
 	rdoc.rdoc_dir = 'rdoc'
-	rdoc.title		= 'Authorized'
+	rdoc.title		= 'Simply Authorized'
 	rdoc.options << '--line-numbers' << '--inline-source'
 	rdoc.rdoc_files.include('README.rdoc')
 	rdoc.rdoc_files.include('lib/**/*.rb')
@@ -37,24 +37,10 @@ begin
 		gem.files -= FileList['**/versions/*']
 		gem.test_files = []
 
-#		gem.add_dependency('i18n', '=0.3.7')
 		gem.add_dependency('rails', '~> 2')
-#		gem.add_dependency('activerecord', '~> 2')
-#		gem.add_dependency('activeresource', '~> 2')
-#		gem.add_dependency('activesupport', '~> 2')
-#		gem.add_dependency('actionmailer', '~> 2')
-#		gem.add_dependency('actionpack', '~> 2')
-#		gem.add_dependency('jrails')
 		gem.add_dependency('jakewendt-simply_helpful')
 		gem.add_dependency('jakewendt-ruby_extension')
-#		gem.add_dependency('chronic')
-#		gem.add_dependency('ruby-hmac')
-#		gem.add_dependency('aws-s3')
-#		gem.add_dependency('ssl_requirement')
 		gem.add_dependency('ryanb-acts-as-list')
-#		gem.add_dependency('gravatar')
-#		gem.add_dependency('RedCloth')
-#		gem.add_dependency('paperclip')
 		gem.add_dependency('thoughtbot-factory_girl')
 		gem.add_dependency('jakewendt-assert_this_and_that')
 		gem.add_dependency('jakewendt-calnet_authenticated')

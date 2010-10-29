@@ -6,6 +6,20 @@ class SimplyAuthorizedGenerator < Rails::Generator::Base
 		#	for code methods for record (Manifest)
 		record do |m|
 
+			File.open('Rakefile','a'){|f| 
+				f.puts <<-EOF
+#	From `script/generate simply_authorized` ...
+require 'simply_authorized/test_tasks'
+				EOF
+			}
+
+			File.open('.autotest','a'){|f| 
+				f.puts <<-EOF
+#	From `script/generate simply_authorized` ...
+require 'simply_authorized/autotest'
+				EOF
+			}
+
 			%w( create_roles create_roles_users ).each do |migration|
 				m.migration_template "migrations/#{migration}.rb",
 					'db/migrate', :migration_file_name => migration
@@ -21,16 +35,16 @@ class SimplyAuthorizedGenerator < Rails::Generator::Base
 				f = file.split('/').slice(-2,2).join('/')
 				m.file(f, "public/stylesheets/#{File.basename(file)}")
 			}
-			m.directory('test/functional/authorized')
-			Dir["#{dot}/templates/functional/*rb"].each{|file| 
-				f = file.split('/').slice(-2,2).join('/')
-				m.file(f, "test/functional/authorized/#{File.basename(file)}")
-			}
-			m.directory('test/unit/authorized')
-			Dir["#{dot}/templates/unit/*rb"].each{|file| 
-				f = file.split('/').slice(-2,2).join('/')
-				m.file(f, "test/unit/authorized/#{File.basename(file)}")
-			}
+#			m.directory('test/functional/authorized')
+#			Dir["#{dot}/templates/functional/*rb"].each{|file| 
+#				f = file.split('/').slice(-2,2).join('/')
+#				m.file(f, "test/functional/authorized/#{File.basename(file)}")
+#			}
+#			m.directory('test/unit/authorized')
+#			Dir["#{dot}/templates/unit/*rb"].each{|file| 
+#				f = file.split('/').slice(-2,2).join('/')
+#				m.file(f, "test/unit/authorized/#{File.basename(file)}")
+#			}
 		end
 	end
 
