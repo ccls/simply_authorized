@@ -44,8 +44,8 @@ begin
 		gem.add_dependency('jakewendt-simply_helpful')
 		gem.add_dependency('jakewendt-ruby_extension')
 		gem.add_dependency('ryanb-acts-as-list')
-		gem.add_dependency('thoughtbot-factory_girl')
-		gem.add_dependency('jakewendt-assert_this_and_that')
+#		gem.add_dependency('thoughtbot-factory_girl')
+#		gem.add_dependency('jakewendt-assert_this_and_that')
 		gem.add_dependency('jakewendt-calnet_authenticated')
 	end
 	Jeweler::GemcutterTasks.new
