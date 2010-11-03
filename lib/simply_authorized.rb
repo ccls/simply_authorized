@@ -31,7 +31,6 @@ if !defined?(RAILS_ENV) || RAILS_ENV == 'test'
 	require 'simply_testable'
 	require 'simply_authorized/factories'
 	require 'simply_authorized/factory_test_helper'
-	require 'simply_authorized/pending'
 end
 
 ActionController::Routing::Routes.add_configuration_file(
