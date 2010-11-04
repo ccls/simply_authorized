@@ -5,8 +5,10 @@ module PermissiveController
 	module ClassMethods
 		def permissive(*args)
 			options = args.extract_options!
-			resource = options[:resource] || ActiveSupport::ModelName.new(
+			resource = ActiveSupport::ModelName.new( options[:resource] ||
 				self.model_name.split('::').last.gsub(/Controller$/,'').singularize)
+#			resource = options[:resource] || ActiveSupport::ModelName.new(
+#				self.model_name.split('::').last.gsub(/Controller$/,'').singularize)
 
 #	remove NameSpace or create the may*required permission
 
