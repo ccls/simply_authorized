@@ -5,9 +5,10 @@ module ResourcefulController
 	module ClassMethods
 		def resourceful(*args)
 			options = args.extract_options!
-			resource = options[:resource] || ActiveSupport::ModelName.new(
+			resource = ActiveSupport::ModelName.new( options[:resource] ||
 				self.model_name.split('::').last.gsub(/Controller$/,'').singularize)
-#				self.model_name.gsub(/Controller$/,'').singularize)
+#			resource = options[:resource] || ActiveSupport::ModelName.new(
+#				self.model_name.split('::').last.gsub(/Controller$/,'').singularize)
 
 			permissive
 
