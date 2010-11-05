@@ -5,20 +5,24 @@ class SimplyAuthorizedGenerator < Rails::Generator::Base
 		#	rails-2.3.10/lib/rails_generator/commands.rb
 		#	for code methods for record (Manifest)
 		record do |m|
+			m.directory('config/autotest')
+			m.file('autotest_simply_authorized.rb', 'config/autotest/simply_authorized.rb')
+			m.directory('lib/tasks')
+			m.file('simply_authorized.rake', 'lib/tasks/simply_authorized.rake')
 
-			File.open('Rakefile','a'){|f| 
-				f.puts <<-EOF
-#	From `script/generate simply_authorized` ...
-require 'simply_authorized/test_tasks'
-				EOF
-			}
-
-			File.open('.autotest','a'){|f| 
-				f.puts <<-EOF
-#	From `script/generate simply_authorized` ...
-require 'simply_authorized/autotest'
-				EOF
-			}
+#			File.open('Rakefile','a'){|f| 
+#				f.puts <<-EOF
+##	From `script/generate simply_authorized` ...
+#require 'simply_authorized/test_tasks'
+#				EOF
+#			}
+#
+#			File.open('.autotest','a'){|f| 
+#				f.puts <<-EOF
+##	From `script/generate simply_authorized` ...
+#require 'simply_authorized/autotest'
+#				EOF
+#			}
 
 			%w( create_roles create_roles_users ).each do |migration|
 				m.migration_template "migrations/#{migration}.rb",
