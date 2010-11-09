@@ -2,7 +2,6 @@
 
 This is a rails app built around a ruby gem for testing.
 
-
 == ToDo
 
 * merge authorized/controller.rb into authorized/permissive_controller.rb
@@ -21,12 +20,14 @@ This is a rails app built around a ruby gem for testing.
 == Installation (as a plugin/engine)
 
  config.gem "jakewendt-simply_authorized",
-    :lib => "simply_authorized"
-
+   :lib => "simply_authorized",
+   :source => 'http://rubygems.org'
 
  class User
    simply_authorized
  end
+
+ script/generate simply_authorized
 
 == Testing (as an app)
 
