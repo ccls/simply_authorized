@@ -1,4 +1,8 @@
-#	From `script/generate simply_authorized` ...
-if Gem.searcher.find('simply_authorized')
+#       From `script/generate simply_authorized` ...
+#if Gem.searcher.find('simply_authorized')
+if sa_gem = Gem.source_index.find_name('jakewendt-simply_authorized').last
+require 'simply_authorized'
+#	it sucks, but this is needed for rake due to the configuration
+require sa_gem.full_gem_path + '/app/models/role'
 require 'simply_authorized/test_tasks'
 end
