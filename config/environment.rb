@@ -8,17 +8,17 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
 
-	config.gem 'jakewendt-calnet_authenticated',
-		:lib    => 'calnet_authenticated'
+	config.gem 'jakewendt-calnet_authenticated'	#,
+#		:lib    => 'calnet_authenticated'
 
 	config.gem 'ryanb-acts-as-list',
 		:lib    => 'acts_as_list'
 
 	config.plugin_paths = [
-		File.expand_path(File.join(File.dirname(__FILE__),'../..')),
-		File.expand_path(File.join(File.dirname(__FILE__),'../../..','peter'))
+		File.expand_path(File.join(File.dirname(__FILE__),'../..'))#,
+	#	File.expand_path(File.join(File.dirname(__FILE__),'../../..','peter'))
 	]
-	config.plugins = [ :simply_authorized, :html_test, :html_test_extension]
+	config.plugins = [ :simply_authorized ]#, :html_test, :html_test_extension]
 
 	config.frameworks -= [:active_resource]
 
@@ -40,8 +40,8 @@ Rails::Initializer.run do |config|
 	if RUBY_PLATFORM =~ /java/
 		#	I'm surprised that I don't need this in my apps.
 		config.gem 'activerecord-jdbcsqlite3-adapter',
-			:lib => 'active_record/connection_adapters/jdbcsqlite3_adapter',
-			:version => '~>0.9'
+			:lib => 'active_record/connection_adapters/jdbcsqlite3_adapter'#,
+#			:version => '~>0.9'
 		#	1.0.1 is for rails 3 I think
 		config.gem 'jdbc-sqlite3', :lib => 'jdbc/sqlite3'
 		config.gem 'jruby-openssl', :lib => 'openssl'

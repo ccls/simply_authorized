@@ -1,1 +1,1 @@
-require 'simply_authorized'
+require 'jakewendt-simply_authorized'
