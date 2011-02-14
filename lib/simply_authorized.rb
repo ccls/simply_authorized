@@ -28,7 +28,7 @@ require 'simply_authorized/permissive_controller'
 if !defined?(RAILS_ENV) || RAILS_ENV == 'test'
 	require 'active_support/test_case'
 	require 'factory_girl'
-	require 'simply_testable'
+#	require 'simply_testable'
 	require 'simply_authorized/factories'
 	require 'simply_authorized/factory_test_helper'
 end

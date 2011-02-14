@@ -10,6 +10,7 @@ Rails::Initializer.run do |config|
 
 	config.gem 'jakewendt-calnet_authenticated'
 	config.gem 'jakewendt-html_test'
+	config.gem 'jakewendt-rails_extension'
 
 	config.gem 'ryanb-acts-as-list',
 		:lib    => 'acts_as_list'
