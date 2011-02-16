@@ -25,12 +25,15 @@ require 'simply_authorized/controller'
 require 'simply_authorized/resourceful_controller'
 require 'simply_authorized/permissive_controller'
 
-if !defined?(RAILS_ENV) || RAILS_ENV == 'test'
+#if !defined?(RAILS_ENV) || RAILS_ENV == 'test'
+if Rails.class_variable_defined?("@@configuration")
 	require 'active_support/test_case'
 	require 'factory_girl'
 #	require 'simply_testable'
 	require 'simply_authorized/factories'
 	require 'simply_authorized/factory_test_helper'
+#	else
+#	running a rake task
 end
 
 ActionController::Routing::Routes.add_configuration_file(
