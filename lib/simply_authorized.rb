@@ -5,7 +5,7 @@ require 'active_support'
 require 'ruby_extension'
 require 'simply_helpful'
 require 'acts_as_list'
-require 'calnet_authenticated'
+#require 'calnet_authenticated'
 
 HTML::WhiteListSanitizer.allowed_attributes.merge(%w(
 	id class style
