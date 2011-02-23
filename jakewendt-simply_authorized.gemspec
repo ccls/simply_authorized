@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{jakewendt-simply_authorized}
-  s.version = "1.2.6"
+  s.version = "1.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George 'Jake' Wendt"]
-  s.date = %q{2011-02-18}
+  s.date = %q{2011-02-23}
   s.description = %q{longer description of your gem}
   s.email = %q{github@jake.otherinbox.com}
   s.extra_rdoc_files = [
@@ -43,10 +43,10 @@ Gem::Specification.new do |s|
     "lib/simply_authorized/test_tasks.rb",
     "lib/simply_authorized/user_model.rb",
     "lib/tasks/application.rake",
-    "lib/tasks/calnet_authenticated.rake",
     "lib/tasks/database.rake",
     "lib/tasks/documentation.rake",
-    "lib/tasks/rcov.rake"
+    "lib/tasks/rcov.rake",
+    "lib/tasks/simply_sessions.rake"
   ]
   s.homepage = %q{http://github.com/jakewendt/simply_authorized}
   s.require_paths = ["lib"]
