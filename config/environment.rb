@@ -11,7 +11,6 @@ Rails::Initializer.run do |config|
 	config.gem 'ccls-calnet_authenticated'
 	config.gem 'jakewendt-html_test'
 	config.gem 'jakewendt-rails_extension'
-
 	config.gem 'ryanb-acts-as-list',
 		:lib    => 'acts_as_list'
 
@@ -46,7 +45,7 @@ Rails::Initializer.run do |config|
 		config.gem 'jdbc-sqlite3', :lib => 'jdbc/sqlite3'
 		config.gem 'jruby-openssl', :lib => 'openssl'
 	else
-		config.gem "sqlite3-ruby", :lib => "sqlite3"
+		config.gem "sqlite3"
 	end
 	
 end
