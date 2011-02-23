@@ -1,2 +1,5 @@
-#	From `script/generate calnet_authenticated` ...
-require 'calnet_authenticated/autotest'
+#	From `script/generate simply_sessions` ...
+unless Gem.source_index.find_name('jakewendt-simply_sessions').empty?
+	gem 'jakewendt-simply_sessions'
+	require 'simply_sessions/autotest'
+end
