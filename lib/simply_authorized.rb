@@ -7,6 +7,7 @@ require 'simply_helpful'
 require 'acts_as_list'
 #require 'calnet_authenticated'
 
+require 'action_controller'	#	loads HTML
 HTML::WhiteListSanitizer.allowed_attributes.merge(%w(
 	id class style
 ))
