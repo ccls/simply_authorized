@@ -53,17 +53,17 @@ module ResourcefulController
 			end
 			end
 
-		protected
-
 			define_method :get_all do
 				instance_variable_set("@#{resource.plural}",
 					resource.constantize.send(:all) )
 			end
+			protected :get_all
 
 			define_method :get_new do
 				instance_variable_set("@#{resource.singular}",
 					resource.constantize.send(:new) )
 			end
+			protected :get_new
 
 			define_method :valid_id_required do
 				if( !params[:id].blank? && 
@@ -75,6 +75,7 @@ module ResourcefulController
 						send("#{resource.plural}_path") )
 				end
 			end
+			protected :valid_id_required
 		end
 
 	end
