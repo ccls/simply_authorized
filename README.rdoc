@@ -19,7 +19,7 @@ This is a rails app built around a ruby gem for testing.
 
 == Installation (as a plugin/engine)
 
- config.gem "jakewendt-simply_authorized",
+ config.gem "ccls-simply_authorized",
    :source => 'http://rubygems.org'
 
  class User

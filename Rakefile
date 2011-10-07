@@ -18,11 +18,11 @@ require 'tasks/rails'
 begin
 	require 'jeweler'
 	Jeweler::Tasks.new do |gem|
-		gem.name = "jakewendt-simply_authorized"
+		gem.name = "ccls-simply_authorized"
 		gem.summary = %Q{one-line summary of your gem}
 		gem.description = %Q{longer description of your gem}
-		gem.email = "github@jake.otherinbox.com"
-		gem.homepage = "http://github.com/jakewendt/simply_authorized"
+		gem.email = "github@jakewendt.com"
+		gem.homepage = "http://github.com/ccls/simply_authorized"
 		gem.authors = ["George 'Jake' Wendt"]
 		# gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
 
@@ -44,9 +44,9 @@ begin
 
 		gem.add_dependency('rails', '~> 2')
 #	causes problems
-#		gem.add_dependency('jakewendt-simply_helpful')
-		gem.add_dependency('jakewendt-ruby_extension')
-		gem.add_dependency('jakewendt-rails_extension')
+#		gem.add_dependency('ccls-simply_helpful')
+		gem.add_dependency('ccls-ruby_extension')
+		gem.add_dependency('ccls-rails_extension')
 		gem.add_dependency('ryanb-acts-as-list')
 #		gem.add_dependency('ccls-calnet_authenticated')
 	end
