@@ -8,9 +8,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
 
-#	Should probably convert this to ccls as well.
-	config.gem 'jakewendt-simply_sessions'
-
+	config.gem 'ccls-simply_sessions'
 	config.gem 'ccls-html_test'
 	config.gem 'ccls-rails_extension'
 	config.gem 'ryanb-acts-as-list',
