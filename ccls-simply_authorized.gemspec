@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{jakewendt-simply_authorized}
+  s.name = %q{ccls-simply_authorized}
   s.version = "1.3.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["George 'Jake' Wendt"]
-  s.date = %q{2011-08-10}
+  s.date = %q{2011-10-07}
   s.description = %q{longer description of your gem}
-  s.email = %q{github@jake.otherinbox.com}
+  s.email = %q{github@jakewendt.com}
   s.extra_rdoc_files = [
     "README.rdoc"
   ]
@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
     "generators/simply_authorized/templates/simply_authorized.rake",
     "generators/simply_authorized/templates/stylesheets/authorized.css",
     "generators/simply_authorized/templates/unit/role_test.rb",
-    "lib/jakewendt-simply_authorized.rb",
+    "lib/ccls-simply_authorized.rb",
     "lib/simply_authorized.rb",
     "lib/simply_authorized/authorization.rb",
     "lib/simply_authorized/autotest.rb",
@@ -49,7 +49,7 @@ Gem::Specification.new do |s|
     "lib/tasks/simply_sessions.rake",
     "rails/init.rb"
   ]
-  s.homepage = %q{http://github.com/jakewendt/simply_authorized}
+  s.homepage = %q{http://github.com/ccls/simply_authorized}
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.6.2}
   s.summary = %q{one-line summary of your gem}
@@ -60,19 +60,19 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<rails>, ["~> 2"])
-      s.add_runtime_dependency(%q<jakewendt-ruby_extension>, [">= 0"])
-      s.add_runtime_dependency(%q<jakewendt-rails_extension>, [">= 0"])
+      s.add_runtime_dependency(%q<ccls-ruby_extension>, [">= 0"])
+      s.add_runtime_dependency(%q<ccls-rails_extension>, [">= 0"])
       s.add_runtime_dependency(%q<ryanb-acts-as-list>, [">= 0"])
     else
       s.add_dependency(%q<rails>, ["~> 2"])
-      s.add_dependency(%q<jakewendt-ruby_extension>, [">= 0"])
-      s.add_dependency(%q<jakewendt-rails_extension>, [">= 0"])
+      s.add_dependency(%q<ccls-ruby_extension>, [">= 0"])
+      s.add_dependency(%q<ccls-rails_extension>, [">= 0"])
       s.add_dependency(%q<ryanb-acts-as-list>, [">= 0"])
     end
   else
     s.add_dependency(%q<rails>, ["~> 2"])
-    s.add_dependency(%q<jakewendt-ruby_extension>, [">= 0"])
-    s.add_dependency(%q<jakewendt-rails_extension>, [">= 0"])
+    s.add_dependency(%q<ccls-ruby_extension>, [">= 0"])
+    s.add_dependency(%q<ccls-rails_extension>, [">= 0"])
     s.add_dependency(%q<ryanb-acts-as-list>, [">= 0"])
   end
 end
