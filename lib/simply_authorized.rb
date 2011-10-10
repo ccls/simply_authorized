@@ -2,10 +2,14 @@ module SimplyAuthorized
 #	predefined namespace
 end
 require 'active_support'
+
+gem 'ccls-ruby_extension'
 require 'ruby_extension'
+
+gem 'ccls-simply_helpful'
 require 'simply_helpful'
+
 require 'acts_as_list'
-#require 'calnet_authenticated'
 
 require 'action_controller'	#	loads HTML
 HTML::WhiteListSanitizer.allowed_attributes.merge(%w(
