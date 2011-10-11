@@ -10,7 +10,8 @@ Rails::Initializer.run do |config|
 
 	config.gem 'ccls-simply_sessions'
 	config.gem 'ccls-html_test'
-	config.gem 'ccls-rails_extension'
+#	config.gem 'ccls-rails_extension'
+	config.gem 'ccls-common_lib'
 	config.gem 'ryanb-acts-as-list',
 		:lib    => 'acts_as_list'
 

@@ -45,8 +45,9 @@ begin
 		gem.add_dependency('rails', '~> 2')
 #	causes problems
 #		gem.add_dependency('ccls-simply_helpful')
-		gem.add_dependency('ccls-ruby_extension')
-		gem.add_dependency('ccls-rails_extension')
+#		gem.add_dependency('ccls-ruby_extension')
+#		gem.add_dependency('ccls-rails_extension')
+		gem.add_dependency('ccls-common_lib')
 		gem.add_dependency('ryanb-acts-as-list')
 #		gem.add_dependency('ccls-calnet_authenticated')
 	end
