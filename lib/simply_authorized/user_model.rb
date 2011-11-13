@@ -96,6 +96,11 @@ module UserModel
 		end
 		alias_method :may_be_user?, :is_user?
 
+		def is_not_user?(user=nil)
+			!is_user?(user)
+		end
+		alias_method :may_not_be_user?, :is_not_user?
+
 		def may_administrate?(*args)
 			(self.role_names & ['superuser','administrator']).length > 0
 		end
