@@ -40,16 +40,14 @@ begin
 #	they need to be included if I'm gonna use'em.
 #
 		gem.test_files  = FileList['test/**/*.rb']
+		gem.test_files -= FileList['test/app/**/*.rb']
+		gem.test_files -= FileList['test/config/**/*']
+		gem.test_files -= FileList['test/unit/user_test.rb']
 		gem.test_files -= FileList['test/test_helper.rb']
 
 		gem.add_dependency('rails', '~> 2')
-#	causes problems
-#		gem.add_dependency('ccls-simply_helpful')
-#		gem.add_dependency('ccls-ruby_extension')
-#		gem.add_dependency('ccls-rails_extension')
 		gem.add_dependency('ccls-common_lib')
 		gem.add_dependency('ryanb-acts-as-list')
-#		gem.add_dependency('ccls-calnet_authenticated')
 	end
 	Jeweler::GemcutterTasks.new
 rescue LoadError
