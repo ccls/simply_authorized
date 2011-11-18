@@ -68,10 +68,10 @@ class SimplyAuthorizedGenerator < Rails::Generator::Base
 				f = file.split('/').slice(-2,2).join('/')
 				m.file(f, "app/controllers/#{File.basename(file)}")
 			}
-			m.directory('test/functional')
+			m.directory('test/functional/simply_authorized')
 			Dir["#{dot}/templates/functional/*rb"].each{|file| 
 				f = file.split('/').slice(-2,2).join('/')
-				m.file(f, "test/functional/#{File.basename(file)}")
+				m.file(f, "test/functional/simply_authorized/#{File.basename(file)}")
 			}
 
 #			m.directory('test/unit/authorized')
