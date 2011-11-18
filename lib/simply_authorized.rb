@@ -6,12 +6,6 @@ require 'active_support'
 gem 'ccls-common_lib'
 require 'common_lib'
 
-#gem 'ccls-ruby_extension'
-#require 'ruby_extension'
-
-#gem 'ccls-simply_helpful'
-#require 'simply_helpful'
-
 require 'acts_as_list'
 
 require 'action_controller'	#	loads HTML
@@ -19,11 +13,11 @@ HTML::WhiteListSanitizer.allowed_attributes.merge(%w(
 	id class style
 ))
 
-%w{models controllers}.each do |dir|
-	path = File.expand_path(File.join(File.dirname(__FILE__), '../app', dir))
-	ActiveSupport::Dependencies.autoload_paths << path
-	ActiveSupport::Dependencies.autoload_once_paths << path
-end
+#%w{models controllers}.each do |dir|
+#	path = File.expand_path(File.join(File.dirname(__FILE__), '../app', dir))
+#	ActiveSupport::Dependencies.autoload_paths << path
+#	ActiveSupport::Dependencies.autoload_once_paths << path
+#end
 
 require 'simply_authorized/core_extension'
 require 'simply_authorized/user_model'
@@ -42,7 +36,7 @@ if defined?(Rails) && Rails.env == 'test' && Rails.class_variable_defined?("@@co
 #		running a rake task
 end
 
-ActionController::Routing::Routes.add_configuration_file(
-	File.expand_path(
-		File.join(
-			File.dirname(__FILE__), '../config/routes.rb')))
+#ActionController::Routing::Routes.add_configuration_file(
+#	File.expand_path(
+#		File.join(
+#			File.dirname(__FILE__), '../config/routes.rb')))
