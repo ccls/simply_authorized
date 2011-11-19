@@ -8,6 +8,7 @@ This is a rails app built around a ruby gem for testing.
 * perhaps include authorized/resourceful_controller.rb as well
 * remove hard coded :users from Role model
 * build a full development testing app
+* Too many quirks to keep controllers and views in gem so install them in app with generator.
 
 == Required Gem Sources
 
