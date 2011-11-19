@@ -32,28 +32,6 @@ class SimplyAuthorizedGenerator < Rails::Generator::Base
 				m.file(f, "public/stylesheets/#{File.basename(file)}")
 			}
 
-#	Due to the ApplicationController errors, don't use 
-#		controllers in the gem.  Models and unit tests
-#		seem to work just fine as they are subclasses of 
-#		ActiveRecord::Base.  Controllers are subclasses of
-#		ApplicationController, which is in the application.
-#
-#	TODO copy routes maybe?	How to copy in the complex route?
-#				Simple, restful route is simple.
-#				Probably have to do this manually.
-#
-#	TODO copy controllers, views and functional tests.
-#		there are no views
-
-#			m.directory('app/views/photos')
-#			Dir["#{dot}/templates/views/photos/*rb"].each{|file| 
-#				f = file.split('/').slice(-3,3).join('/')
-#	has an extra directory in path which is needed in m.file(f
-#	which is relative to templates/
-#				m.file(f, "app/views/photos/#{File.basename(file)}")
-#			}
-#
-#	more generic way (not yet actually tested)
 #			Dir["#{dot}/templates/app/views/*/**/"].each do |dir|
 #				last_dir = dir.split('/').last
 #				m.directory("app/views/#{last_dir}")
@@ -72,6 +50,12 @@ class SimplyAuthorizedGenerator < Rails::Generator::Base
 			Dir["#{dot}/templates/functional/*rb"].each{|file| 
 				f = file.split('/').slice(-2,2).join('/')
 				m.file(f, "test/functional/simply_authorized/#{File.basename(file)}")
+			}
+
+			m.directory('test/fixtures')
+			Dir["#{dot}/templates/fixtures/*yml"].each{|file| 
+				f = file.split('/').slice(-2,2).join('/')
+				m.file(f, "test/fixtures/#{File.basename(file)}")
 			}
 
 #			m.directory('test/unit/authorized')
