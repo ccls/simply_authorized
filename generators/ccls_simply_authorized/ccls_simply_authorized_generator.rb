@@ -1,4 +1,4 @@
-class SimplyAuthorizedGenerator < Rails::Generator::Base
+class CclsSimplyAuthorizedGenerator < Rails::Generator::Base
 
 	def manifest
 		#	See Rails::Generator::Commands::Create
