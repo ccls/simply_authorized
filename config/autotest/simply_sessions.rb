@@ -1,3 +1,0 @@
-#	From `script/generate simply_sessions` ...
-gem 'ccls-simply_sessions'
-require 'simply_sessions/autotest'

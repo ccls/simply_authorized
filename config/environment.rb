@@ -8,7 +8,6 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
 
-	config.gem 'ccls-simply_sessions'
 	config.gem 'ccls-html_test'
 	config.gem 'ccls-common_lib'
 	config.gem 'ryanb-acts-as-list',
