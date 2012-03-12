@@ -16,6 +16,15 @@ class CclsSimplyAuthorizedGenerator < Rails::Generator::Base
 			m.directory('lib/tasks')
 			m.file('simply_authorized.rake', 'lib/tasks/simply_authorized.rake')
 
+
+#	Why not remove duplication and copy the files from where
+#		they are, rather than have 2 different copies?
+#	May have to be more explicit about which files to copy
+#		and not use * as much.
+#	Of course, this would mean modifying the Rakefile
+#		to have these files in the gem.
+
+
 			%w( create_roles create_roles_users ).each do |migration|
 				m.migration_template "migrations/#{migration}.rb",
 					'db/migrate', :migration_file_name => migration
@@ -58,10 +67,15 @@ class CclsSimplyAuthorizedGenerator < Rails::Generator::Base
 				m.file(f, "test/fixtures/#{File.basename(file)}")
 			}
 
-#			m.directory('test/unit/authorized')
+#			m.directory('app/models')
+#			Dir["#{dot}/templates/models/*rb"].each{|file| 
+#				f = file.split('/').slice(-2,2).join('/')
+#				m.file(f, "app/models/#{File.basename(file)}")
+#			}
+#			m.directory('test/unit/simply_authorized')
 #			Dir["#{dot}/templates/unit/*rb"].each{|file| 
 #				f = file.split('/').slice(-2,2).join('/')
-#				m.file(f, "test/unit/authorized/#{File.basename(file)}")
+#				m.file(f, "test/unit/simply_authorized/#{File.basename(file)}")
 #			}
 		end
 	end
